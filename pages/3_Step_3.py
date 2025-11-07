@@ -27,7 +27,29 @@ st.markdown("""
     div[data-testid="stBlock"] {
         max-width: 80vw !important;
     }
+/* 5. (NEW!) 오른쪽 위 헤더 버튼 숨기기 */
+    
+    /* 'Share' 버튼 숨기기 */
+    button[title="Share"] {
+        display: none;
+    }
+
+    /* 'Edit app' (연필 아이콘) 버튼 숨기기 */
+    button[title="Edit app"] {
+        display: none;
+    }
+    
+    /* 'View source' (깃허브 아이콘) 버튼 숨기기 */
+    a[title="View source"] {
+        display: none;
+    }
+
+    /* '...' (더보기) 메뉴 버튼 숨기기 */
+    button[data-testid="baseButton-headerNoPadding"] {
+        display: none;
+    }
 </style>
+    
 """, unsafe_allow_html=True)
 
 # --- 가로 내비게이션 바 ---
