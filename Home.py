@@ -11,7 +11,7 @@ st.set_page_config(
 
 # --- (st.set_page_config 다음 줄에 넣으세요) ---
 
-# --- Lato 폰트 + 사이드바 숨기기 + 너비 95% 강제 설정 ---
+# --- Lato 폰트 + 사이드바/헤더 버튼 숨기기 + 너비 80% ---
 st.markdown("""
 <style>
     /* 1. Google Font @import (Lato) */
@@ -24,7 +24,7 @@ st.markdown("""
         font-style: normal;
     }
 
-    /* 3. 기존의 사이드바 숨기기 코드 */
+    /* 3. 사이드바 숨기기 코드 */
     [data-testid="stSidebar"] {
         display: none;
     }
@@ -33,11 +33,12 @@ st.markdown("""
         display: none;
     }
 
-    /* 4. (중요) 메인 콘텐츠 블록 최대 너비 95%로 강제 */
+    /* 4. 메인 콘텐츠 블록 최대 너비 80% (님이 설정하신 값) */
     div[data-testid="stBlock"] {
         max-width: 80vw !important;
     }
-/* 5. (NEW!) 오른쪽 위 헤더 버튼 숨기기 */
+
+    /* 5. (NEW!) 오른쪽 위 헤더 버튼 숨기기 */
     
     /* 'Share' 버튼 숨기기 */
     button[title="Share"] {
@@ -58,6 +59,7 @@ st.markdown("""
     button[data-testid="baseButton-headerNoPadding"] {
         display: none;
     }
+
 </style>
 """, unsafe_allow_html=True)
 
